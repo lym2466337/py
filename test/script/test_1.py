@@ -13,14 +13,10 @@ class Test:
     def setup_class(self):
         # 获取driver
         self.driver = init_driver.p_driver()
-        self.base = Base(self.driver)
-        self.driver.get("https://gov.jlb.47.jlb0.uidev.work")
+
 
     def test_1(self):
-        self.base.input_ele((By.ID, "user-name"), "admin")
-        self.base.input_ele((By.ID, "user-pwd"), "admin")
-        sleep(3)
-        self.base.click_ele((By.ID,"LoginButton"))
+        self.driver.get("https://gov.jlb.47.jlb0.uidev.work")
 
 
     # def test_2(self):
